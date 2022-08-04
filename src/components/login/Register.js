@@ -1,166 +1,128 @@
 import React from 'react'
 
+
 export default function Register() {
   return (
-    <div className='container'>
-        <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Billing address</h4>
-        <form class="needs-validation" novalidate="">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required=""/>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
+    <div className="container">
+       
+            <div className="col-md-7 col-lg-8 my-3">
+                <h1 className="d-none">1</h1>
+                <h2 className="d-none">2</h2>
+                <h3 className="d-none">3</h3>
+                <h4 className="mb-3">Regístrate</h4>
+                <form 
+                className="needs-validation" 
+                
+                autocomplete="off"
+                >
+                    <div className="row g-3">
+                        <div className="col-sm-6">
+                        <label htmlFor="nombre" className="form-label">Nombre<span className="text-muted">*</span></label>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            id="nombre"
+                            placeholder="Juanito" 
+                            required=""
+                            name="nombre"
+                         
+                        />
+                        <div className="invalid-feedback d-block">
+                            
+                        </div>
+                        </div>
+
+                        <div className="col-sm-6">
+                        <label htmlFor="apellido" className="form-label">Apellido<span className="text-muted">*</span></label>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            id="apellido" 
+                            placeholder="Doe" 
+                            required=""
+                            name="apellido"
+                            
+                        />
+                        <div className="invalid-feedback d-block">
+                           
+                        </div>
+                        </div>
+
+                        <div className="col-12">
+                        <label htmlFor="username" className="form-label">Email <span className="text-muted">*</span></label>
+                        <input 
+                            type="email" 
+                            className="form-control" 
+                            id="username" 
+                            placeholder="you@example.com"
+                            name="username"
+                         
+                            autoComplete="off"
+                        />
+                        <div className="invalid-feedback d-block">
+                            
+                        </div>
+                        </div>
+
+                        <div className="col-12">
+                        <label htmlFor="password" className="form-label">Contraseña<span className="text-muted">*</span></label>
+                        <input 
+                            type="password" 
+                            className="form-control" 
+                            id="password" 
+                            placeholder="" 
+                            required=""
+                            name="password"
+                        
+                            autocomplete="off"
+                        />
+                        <div className="invalid-feedback d-block">
+                            
+                        </div>
+                        </div>
+
+                        <div className="col-12">
+                        <label htmlFor="fechaNacimiento" className="form-label">Fecha de Nacimiento <span className="text-muted">*</span></label>
+                        <input 
+                           
+                            type="date" 
+                            className="form-control" 
+                            id="fechaNacimiento" 
+                            name="fechaNacimiento"
+                            
+                        />
+                        <div className="invalid-feedback d-block">
+                           
+                        </div>
+                        </div>
+                    </div>
+
+                    <hr className="my-4"/>
+
+                    <div className="form-check">
+                        <input 
+                            type="checkbox" 
+                            className="form-check-input" 
+                            id="save-info"
+                            
+                        />
+                        <label className="form-check-label" htmlFor="save-info">Aceptar <a href="https://iudigital.edu.co"> términos y condiciones </a></label>
+                    </div>
+
+                    <hr className="my-4"/>                    
+                    <button
+                        
+                        type="submit"
+                        className="btn btn-primary w-50 btn-lg button-standard"
+                    >
+                    
+                        Enviar
+                    </button>
+                </form>
+                <a href="/login">
+                    <p>¿Ya estás registrado?</p>
+                </a>
             </div>
-
-            <div class="col-sm-6">
-              <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required=""/>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="username" class="form-label">Username</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Username" required=""/>
-              <div class="invalid-feedback">
-                  Your username is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span>
-              </label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com"/>
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="address" class="form-label">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required=""/>
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="address2" class="form-label">Address 2 
-              <span class="text-muted">(Optional)</span>
-              </label>
-              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite"/>
-            </div>
-
-            <div class="col-md-5">
-              <label for="country" class="form-label">Country
-              </label>
-              <select class="form-select" id="country" required="">
-                <option value="">Choose...</option>
-                <option>United States</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <label for="state" class="form-label">State</label>
-              <select class="form-select" id="state" required="">
-                <option value="">Choose...</option>
-                <option>California</option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="zip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required=""/>
-              <div class="invalid-feedback">
-                Zip code required.
-              </div>
-            </div>
-          </div>
-
-          <hr class="my-4"/>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address"/>
-            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info"/>
-            <label class="form-check-label" for="save-info">Save this information for next time</label>
-          </div>
-
-          <hr class="my-4"/>
-
-          <h4 class="mb-3">Payment</h4>
-
-          <div class="my-3">
-            <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required=""/>
-              <label class="form-check-label" for="credit">Credit card</label>
-            </div>
-            <div class="form-check">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required=""/>
-              <label class="form-check-label" for="debit">Debit card</label>
-            </div>
-            <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required=""/>
-              <label class="form-check-label" for="paypal">PayPal</label>
-            </div>
-          </div>
-
-          <div class="row gy-3">
-            <div class="col-md-6">
-              <label for="cc-name" class="form-label">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required=""/>
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">
-                Name on card is required
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <label for="cc-number" class="form-label">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required=""/>
-              <div class="invalid-feedback">
-                Credit card number is required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-expiration" class="form-label">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required=""/>
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-cvv" class="form-label">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required=""/>
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
-          </div>
-
-          <hr class="my-4"/>
-
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-        </form>
-      </div>
-    </div>
+        </div>
   )
 }

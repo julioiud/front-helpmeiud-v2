@@ -1,8 +1,8 @@
-import Register from './components/login/Register';
+import AppRouter from './routers/AppRouter';
 
 function App() {
   return (
-    <Register />
+    <AppRouter />    
   );
 }
 
